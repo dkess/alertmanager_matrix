@@ -1,0 +1,8 @@
+homeserver_url: "https://matrix.org"
+matrix_http_config:
+  bearer_token_file: /path/to/access_token
+text: |-
+  {{ range $a := .Alerts -}}
+  {{ if eq $a.Status "firing" }}🚨{{ else }}✅{{ end }} {{ index $a.Annotations "summary" }}
+  {{ end -}}
+  {{ if ne .TruncatedAlerts 0 }}... and {{ .TruncatedAlerts }} more{{ end -}}
