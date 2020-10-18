@@ -10,6 +10,12 @@ Alertmanager Matrix provides a webhook endpoint that takes alerts and sends them
 
     make
 
+## Packages
+
+This software is available in the AUR: [`alertmanager-matrix`](https://aur.archlinux.org/packages/alertmanager-matrix/)
+
+If you're interested in a package for your favorite distro, please let me know!
+
 ## Configuration
 
 Alertmanager Matrix is configured via a configuration file and command-line flags (such as what configuration file to load, what port to listen on, and the logging format and level).
