@@ -90,7 +90,7 @@ func sendToMatrix(ctx context.Context, httpClientConfig pconfig.HTTPClientConfig
 		return nil, fmt.Errorf("JSON marshal: %w", err)
 	}
 
-	rt, err := pconfig.NewRoundTripperFromConfig(httpClientConfig, "matrix_client", false, false)
+	rt, err := pconfig.NewRoundTripperFromConfig(httpClientConfig, "matrix_client", pconfig.WithHTTP2Disabled())
 	if err != nil {
 		return nil, fmt.Errorf("Error generating HTTP round tripper: %w", err)
 	}
